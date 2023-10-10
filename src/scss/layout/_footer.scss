@@ -1,0 +1,71 @@
+.footer {
+  //background-color: $clr-accent-dark;
+  background: #021B79;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    gap: 1rem;
+    padding-block: 4rem;
+  }
+  &__contacts {
+    color: $clr-light;
+
+    address {
+      padding-top: 1rem;
+      p {
+        font-family:"Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        a {
+          color: darken($clr-accent, 10%);
+          &:hover {
+            color: $clr-accent;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    font-family:"Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.6rem;
+
+    p {
+      font-family:"Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__copyright {
+    font-size: .8rem;
+    color: gray;
+    text-align: center;
+    padding: .6rem;
+    background-color: darken($clr-accent-dark, 10%);
+
+    a {
+      opacity: .6;
+      margin-left: 6px;
+      color: $clr-accent;
+      text-decoration: none;
+    }
+    a:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-md) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-inline: 20px;
+    }
+  }
+}

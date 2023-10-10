@@ -1,0 +1,24 @@
+<form class="form header-form" id='header-form'>
+    <h4 class='form__title'>Зв'яжіться з нами</h4>
+    <div class="input-group">
+        <input class="input-group__input" type="text" placeholder="&nbsp;" name="username" id="usernameHeader" autocomplete="given-name" required />
+        <label class="input-group__label" for="usernameHeader">Ім'я</label>
+    </div>
+    <div class="input-group">
+        <input
+                class="input-group__input"
+                type="tel"
+                name="usertel"
+                placeholder="&nbsp;"
+                id="usertelHeader"
+                autocomplete='tel'
+                pattern="[0-9]{10}"
+                required />
+        <label class="input-group__label" for="usertelHeader">Телефон</label>
+        <p class='form__footer-tel-sample'>Зразок: 0501234567</p>
+    </div>
+    <button type="submit" class="header-form__btn btn btn-clr-accent">
+        <span class='form__btn-text'>Замовити</span>
+    </button>
+    <span class='form__footer-text'>всі данні залишуться приватними</span>
+</form>

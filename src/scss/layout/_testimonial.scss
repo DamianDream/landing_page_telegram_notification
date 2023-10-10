@@ -1,0 +1,109 @@
+.testimonial {
+  min-height: 90vh;
+  display: grid;
+  place-content: center;
+  &__title {
+    padding-bottom: 4rem;
+  }
+
+  &__container {
+    padding-bottom: 4rem;
+  }
+}
+
+.testimonial__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-inline: 10px;
+}
+
+.testimonial-card {
+  position: relative;
+  padding: .8rem 1.2rem;
+  min-height: 180px;
+  flex: 0 0 30% ;
+  background-color: $clr-light;
+  border-radius: 10px;
+  font-family:"Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all .2s ease-in;
+
+  &:hover {
+    transform: scale(105%);
+  }
+
+  &__icon {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: lighten($clr-accent-dark-400, 10%);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 20px;
+      width: 20px;
+      background-image: url('./../img/icons/quote-3.svg');
+    }
+
+  }
+
+  &__text {
+
+    font-size: inherit;
+    padding-bottom: 10px;
+  }
+
+  &__person {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__person-photo {
+    width: 80px;
+  }
+  &__person-data > p {
+    font-size: inherit;
+    margin: 0;
+  }
+
+  &__person-data p:first-child {
+    font-family:"Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: $layout-breakpoint-lg) {
+  .testimonial-card[data-md] {
+    display: none;
+  }
+  .testimonial-card {
+    padding: .8rem 1.2rem;
+    min-height: 150px;
+    flex: 0 0 40% ;
+  }
+}
+
+@media screen and (max-width: $layout-breakpoint-md) {
+  .testimonial-card[data-md] {
+    display: none;
+  }
+  .testimonial-card {
+    padding: .8rem 1.2rem;
+    flex: 0 0 80% ;
+  }
+}

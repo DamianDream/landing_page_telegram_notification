@@ -1,0 +1,112 @@
+
+.header-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $clr-accent;
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  min-width: 350px;
+  border-radius: 20px;
+  &__btn {
+    align-self: center;
+  }
+  .form__footer-tel-sample {
+    margin-bottom: 0;
+    font-size: .8rem;
+    text-align: end;
+  }
+}
+
+.input-group {
+  margin-bottom: 2rem;
+  position: relative;
+  &__label {
+    display: block;
+    position: absolute;
+    top: 0;
+    line-height: $input-height;
+    color: #aaa;
+    left: 5px;
+    padding: 0 5px;
+    transition: line-height 200ms ease-in-out,
+    font-size 200ms ease-in-out,
+    top 200ms ease-in-out;
+    pointer-events: none;
+  }
+  &__input {
+    width: 100%;
+    height: $input-height;
+    border: 1px solid $clr-accent;
+    border-radius: 3px;
+    padding: 0 10px;
+    &:not(:placeholder-shown),
+    &:focus {
+      + label {
+        color: white;
+        border-radius: 4px;
+        line-height: 10px;
+        opacity: 1;
+        font-size: 12px;
+        top: -15px;
+        left: -5px;
+      }
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid gray;
+      + label {
+        color: white;
+      }
+    }
+  }
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    gap: 1rem;
+  }
+}
+.form {
+  &__title {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+   &__footer-text {
+     font-size: .9rem;
+     text-align: center;
+     padding-top: 10px;
+     color: rgba(255, 255, 255, .6);
+   }
+}
+
+.footer-input-group {
+  margin-bottom: 2rem;
+
+  position: relative;
+  &__label {
+    color: $clr-accent;
+  }
+  &__input {
+    width: 100%;
+    height: $input-height;
+    border: 1px solid $clr-accent;
+    border-radius: 3px;
+    padding: 0 10px;
+  }
+  textarea {
+    resize: vertical;
+    outline: none;
+    border: 1px solid gray;
+    min-height: 6rem;
+  }
+}
+
+.footer-form__btn {
+  width: 100%;
+  margin-left: 0;
+}

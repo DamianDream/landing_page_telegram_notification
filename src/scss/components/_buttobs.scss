@@ -1,0 +1,40 @@
+$clr-accent-darken: darken($clr-accent, 10%);
+$clr-accent-dark-lighten: lighten($clr-accent-dark, 20%);
+
+ .btn {
+   margin: 10px;
+   padding: 15px 30px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   border-radius: 10px;
+   display: block;
+   border: 0px;
+   font-weight: 700;
+   cursor: pointer;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+
+   &:hover {
+     background-position: right center;
+     text-decoration: none;
+   }
+
+   &:active {
+     transform: scale(0.95);
+   }
+ }
+
+.btn-clr-accent {
+  color: $clr-accent-dark;
+  box-shadow: 0px 0px 14px -7px $clr-accent;
+  background-image: linear-gradient(45deg, $clr-accent-darken 0%, $clr-accent  51%, $clr-accent-darken 100%);
+}
+
+.btn-clr-accent-dark {
+  color: $clr-light;
+  box-shadow: 0px 0px 14px -7px $clr-accent-dark;
+  background-image: linear-gradient(45deg, $clr-accent-dark 0%, $clr-accent-dark-lighten  51%, $clr-accent-dark 100%);
+}

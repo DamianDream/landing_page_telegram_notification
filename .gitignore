@@ -1,10 +1,5 @@
 ### Node template
 build/
-gulp/
-src/
-gulpfile.js
-package.json
-webpack.config.js
 .idea/
 
 # Logs

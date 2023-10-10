@@ -1,0 +1,64 @@
+dialog {
+  padding: .5rem;
+  background: $clr-accent-dark;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  min-width: 30vw;
+
+  &::backdrop {
+    background-color: $clr-accent-dark;
+    opacity: .8;
+  }
+}
+.modal-form {
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.modal-group {
+  &__label {
+    color: $clr-accent;
+  }
+  &__select {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 3rem;
+    border-radius: .25em;
+    overflow: hidden;
+
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1em;
+      background-color: #34495e;
+      transition: .25s all ease;
+      pointer-events: none;
+    }
+    &:hover::after {
+      color: #f39c12;
+    }
+  }
+  select {
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: $clr-accent-dark;
+    background-color: $clr-light;
+    background-image: none;
+    cursor: pointer;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

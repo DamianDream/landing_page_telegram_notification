@@ -1,0 +1,56 @@
+.buy-conditions {
+  min-height: 20vh;
+  padding-top: 2rem;
+  background-color: hsl(0, 0%, 100%);
+
+  &__items {
+    padding-block: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family:"Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    img {
+      width: 100px;
+    }
+
+  }
+  &__title {
+    font-family:"Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.9rem;
+    color: $clr-accent-dark;
+  }
+
+  &__footer-text {
+    text-align: center;
+    font-family:"Montserrat", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: $layout-breakpoint-sm) {
+  .buy-conditions {
+
+    &__items {
+      padding-block: 2rem;
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      padding-left: 10%;
+      justify-content: space-evenly;
+    }
+  }
+}

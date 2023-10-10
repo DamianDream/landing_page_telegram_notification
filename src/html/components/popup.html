@@ -1,0 +1,34 @@
+<dialog data-modal>
+    <form class="form modal-form" id='modal-form' formmethod='dialog'>
+        <div class="modal-group">
+            <label class="modal-group__label" for="usernameModal">Ім'я</label>
+            <input class="input-group__input" type="text" placeholder="&nbsp;" name="username" id="usernameModal" autocomplete="given-name" required />
+        </div>
+        <div class="modal-group">
+            <label class="modal-group__label" for="usertelModal">Телефон</label>
+            <input
+                    class="input-group__input"
+                    type="tel" name="usertel"
+                    placeholder="&nbsp;"
+                    id="usertelModal"
+                    autocomplete='tel'
+                    required />
+        </div>
+
+        <div class="modal-group">
+            <label for="breedchose" class="modal-group__label">Виберіть породу:</label>
+            <select name="breedchose" id="breedchose" form="breedchose" class="modal-group__select">
+                <option value="Дюрок" selected>Дюрок</option>
+                <option value="Пʼєтрен">Пʼєтрен</option>
+                <option value="Ландрас">Ландрас</option>
+                <option value="Українська біла">Українська біла</option>
+                <option value="Макстер 404">Макстер 404</option>
+                <option value="Допомогти з вибором">Допомогти з вибором</option>
+            </select>
+        </div>
+
+        <button type="submit" class="modal-form__btn btn btn-clr-accent">
+            <span class='form__btn-text'>Замовити</span>
+        </button>
+    </form>
+</dialog>

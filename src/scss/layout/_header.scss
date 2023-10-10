@@ -1,0 +1,91 @@
+.header {
+
+  background: $clr-accent-blue;
+  background: -webkit-linear-gradient(to right, $clr-accent-dark, $clr-accent-dark-400);
+  background: linear-gradient(to right, $clr-accent-dark, $clr-accent-dark-400);
+
+  color: #fff;
+  min-height: 50vh;
+  display: grid;
+  place-content: center;
+  padding-inline: 4%;
+
+  @media only screen and (min-width: $layout-breakpoint-md) {
+      height: 100%;
+  }
+
+  &__content {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media only screen and (min-width: $layout-breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-block: 4rem;
+    }
+  }
+
+  &__content-textBox {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    text-align: center;
+
+    @media only screen and (max-width: $layout-breakpoint-md) {
+      width: 90%;
+      align-items: center;
+    }
+
+  }
+  &__title, &__text{
+    color: inherit;
+    line-height: 1;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 3.7rem;
+    text-align: left;
+    padding-bottom: 1.6rem;
+
+    @media only screen and (max-width: $layout-breakpoint-md) {
+      font-size: 3rem;
+      text-align: center;
+      padding-inline: 10px;
+      padding-top: 2rem;
+      padding-bottom: 1.4rem;
+    }
+  }
+  &__text {
+    padding-bottom: 1rem;
+    font-family:"Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.6rem;
+
+    @media only screen and (min-width: $layout-breakpoint-md) {
+      text-align: start;
+    }
+  }
+  &__text-accent {
+    font-weight: 600;
+  }
+
+  &__content-formBox {
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $layout-breakpoint-md) {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+      justify-content: center;
+    }
+  }
+}

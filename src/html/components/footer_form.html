@@ -1,0 +1,30 @@
+<form class="form footer-form" id='footer-form'>
+    <div class='footer-form__top'>
+        <div class="footer-input-group">
+            <label class="footer-input-group__label" for="username">Ім'я</label>
+            <input class="footer-input-group__input" type="text" placeholder="&nbsp;" name="username" id="username" autocomplete="given-name" required />
+        </div>
+        <div class="footer-input-group">
+            <label class="footer-input-group__label" for="usertel">Телефон</label>
+            <input class="footer-input-group__input" type="tel" name="usertel" placeholder="&nbsp;" id="usertel" autocomplete='tel' required />
+        </div>
+    </div>
+    <div class="footer-input-group">
+        <label class="footer-input-group__label text-area__label" for="usermessage">Повідомлення</label>
+        <textarea
+                class="footer-input-group__input"
+                autocomplete='off'
+                id="usermessage"
+                name="usermessage"
+                wrap="off"
+                cols="30"
+                rows="5"
+                maxlength='400'
+                spellcheck='true'
+                wrap='soft'
+        ></textarea>
+    </div>
+    <button type="submit" class="footer-form__btn btn btn-clr-accent">
+        <span class='form__btn-text'>Надіслати</span>
+    </button>
+</form>
